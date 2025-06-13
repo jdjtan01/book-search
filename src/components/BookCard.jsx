@@ -4,7 +4,7 @@ import {useParams, useNavigate, Link} from 'react-router-dom'
 
 export default function Book(props) {
     return (
-        <div id="book-card" className="container mx-2 my-4 col-10">
+        <div id="book-card" className="container mx-auto my-4 col-10">
             <div className='row'>
                 <div className="col-lg-1 col-md-3 col-sm-3 px-2 mx-2" id="book-img">
                     <a href={props.img_url} target='_blank'>

@@ -5,13 +5,10 @@ import Book from './BookCard';
 
 export default function SearchBar(props){
     const [bookSearch, setBookSearch] = useState([]);
-    const [authorName, setAuthorName] = useState([]);
     const [searchValue, setSearchValue] = useState('');
-    const [bookTitle, setBookTitle] = useState('');
-    const [bookAuthor, setBookAuthor] = useState('');
-    const [bookSubject, setBookSubject] = useState('');
-    const [searchBy, setSearchBy] = useState("title")
-    const [searchParam, setSearchParam] = useState('');
+    const [searchBy, setSearchBy] = useState("title");
+    const [searchedParam, setSearchedParam] = useState('')
+
     const API_URL = "https://openlibrary.org/search.json";
     const COVER_PAGE_URL = "https://covers.openlibrary.org/b"
     const NO_COVER_URL = "https://openlibrary.org/images/icons/avatar_book-sm.png"
@@ -50,14 +47,16 @@ export default function SearchBar(props){
                         var lendingEdition = detail.lending_edition_s;
                         var titleUnderScore = detail.title.replace(/\s+/g, '_' );
                         var worksPage = ""
-
                         worksPage = `${WORKS_URL}/${works_key}/${titleUnderScore}?edition=key%3A/books/${lendingEdition}`;
+
+                        setSearchedParam(`You searched for the ${searchBy}: ${searchValue}`)
                         
                         return(
                             <Book key={detail.key} title={detail.title} author={author} cover_page={coverPage} img_url={coverPage} reDirect={worksPage}/>
                         )
                     }))
                 } else {
+                    setSearchedParam('')
                     setBookSearch("No books directly matched your search.")
                 }
             })
@@ -97,6 +96,10 @@ export default function SearchBar(props){
             {/* Results Page */}
             
             <div id='resultsPage'>
+                <div className='mx-5 px-5 col-sm-12'>
+                    <h5 className=''>{searchedParam}</h5>
+                </div>
+                
                 {bookSearch}
             </div>
         </div>
