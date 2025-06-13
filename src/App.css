@@ -1,0 +1,90 @@
+#root {
+  background-image: url("../src/assets/dark-stripes.png");
+  margin-bottom: 0;
+  min-height: 100vh;
+}
+
+#search-bar{
+    padding-top: 100px;
+    
+}
+
+#searchBy {
+  border-radius: 2px;
+  margin-right: 2px;
+  height: 40px;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  border: none;
+  background-color: #C8B6A6;
+  color: #3f3020;
+}
+
+#coverPage {
+  width: 100px;
+  max-height: 170px;
+}
+
+#book-card {
+  border: 1px solid #dfdcdc;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: whitesmoke;
+}
+
+
+footer {
+  margin-top: 100px;
+}
+
+#searchPage {
+  min-height: 80vh;
+}
+
+button {
+  color: #3f3020;
+  background-color: #A4907C;
+  border-color: #8D7B68;
+  border-radius: 5px;
+}
+
+#search-bar h1{
+  color: #3f3020;
+  font-size: 4rem;
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#get {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin-left: 3px;
+  border: none;
+  background-color: #A4907C;
+  border-radius: 5px;
+  height: 40px;
+  width: 100px;
+}
+
+#titleInput {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  height: 40px;
+  width: 300px;
+  border-color: white;
+}
+
+#moreDetails {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
