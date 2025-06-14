@@ -77,7 +77,7 @@ export default function SearchBar(props){
         <div id="searchPage" className='container'>
             {/* Search Bar */}
             <div id="search-bar" className='mx-auto text-center col-sm-12 col-lg-6 col-md-6 pb-5'>
-                <a href="/">
+                <a href="/book-search">
                 <h1>Your Book</h1>
                 </a>
                 <form action="post" onSubmit={Search}>
